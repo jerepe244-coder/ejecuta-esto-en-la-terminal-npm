@@ -3,6 +3,19 @@
   "name": "ejecuta esto en la terminal: npm",
   "createdAt": "2026-11-02T04:13:54.813Z",
   "filename": "186522b9-ad0a-43ec-8da4-f47aa61fbe2c.json",
-  "geminiStarted": false,
-  "messages": []
+  "geminiStarted": true,
+  "messages": [
+    {
+      "id": "fbb0b77f-eafb-431c-b997-1fbf72f4573c",
+      "role": "user",
+      "content": "ejecuta esto en la terminal: npm install cheerio",
+      "status": "pending",
+      "model": "gemini-3.8-flash-medium",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-11-02T04:13:57.193Z",
+      "sender": "ios",
+      "is_cancelled": false
+    }
+  ]
 }
