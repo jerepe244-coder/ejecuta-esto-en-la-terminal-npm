@@ -280,6 +280,18 @@
       "created_at": "2026-11-02T05:31:21.177Z",
       "sender": "ios",
       "is_cancelled": false
+    },
+    {
+      "id": "9d883614-a000-4147-9f6d-b5169cb9e038",
+      "role": "user",
+      "content": "PROMPT PARA ANTIGRAVITY (Fase 3 - Interfaz de Usuario Completa):Contexto: La Fase 2 (Base de datos en Supabase y guardado de datos) está funcionando perfectamente. Ahora vamos a construir la interfaz visual del software.\n \nMisión: Transformar la app actual en un Dashboard profesional (estilo Vercel o Linear) usando shadcn/ui y lucide-react.\n \nPaso 1: Instalación de UI\n1. Ejecutá npx shadcn@latest init (elegí el tema oscuro por defecto, color Zinc o Slate).\n2. Instalá estos componentes: npx shadcn@latest add button card input select table badge separator\n3. Instalá recharts para los gráficos y framer-motion para animaciones. \nPaso 2: El Layout del Dashboard\nCreá un route group app/(dashboard)/layout.tsx que contenga:\n• Un Sidebar (menú lateral) fijo con el logo de ZYRVAE y links a: /overview (Dashboard), /prospects (CRM) y /scout (Escanear).\n• Un Topbar (barra superior) que muestre la sección actual y un indicador de estado.\n• Todo debe ser responsive (en celular el menú se colapsa o se vuelve una barra inferior). \nPaso 3: Vista /scout (El Escáner)\nMové el buscador que ya teníamos a esta ruta. Mejoralo:\n• Usá los componentes de shadcn (Card, Input, Select, Button).\n• Que tenga una animación de carga elegante (skeleton loader o spinner) mientras escanea.\n• Al terminar, debe mostrar el resultado en tarjetas bonitas (con el Pain Score destacado en un círculo de color) y un botón que diga \"Ver en el CRM\". \nPaso 4: Vista /prospects (El CRM)\nEs la tabla principal.\n• Usá el componente Table de shadcn.\n• Hacé un fetch a Supabase (usando el cliente de servidor) para traer todos los prospectos ordenados por fecha.\n• Columnas: Nombre (con la URL abajo en gris), Industria, Prioridad (usando Badge de colores: Rojo=Alta, Amarillo=Media, Verde=Baja), Fecha, y un botón de acción.\n• El botón de acción debe abrir un menú para cambiar el estado (Nuevo, Contactado, Ganado, Perdido). Al cambiar el estado, se actualiza en Supabase y se recarga la tabla. \nPaso 5: Vista /overview (El Dashboard Principal)\nEs la pantalla de inicio.\n• Arriba (KPIs): 3 o 4 tarjetas (Cards) que traigan datos reales de Supabase usando count. Ejemplo: \"Total Prospectos\", \"Prioridad Alta\" (donde priority = 'alta'), \"Escaneos Hoy\".\n• Abajo a la izquierda (Gráfico): Un gráfico de torta (PieChart de Recharts) que muestre la distribución de prospectos por industria (cuántos hoteles, cuántos restaurantes, etc.).\n• Abajo a la derecha (Actividad): Un feed vertical leyendo la tabla activity_log. Cada ítem debe tener un ícono, el mensaje y la fecha. \nRegla de oro: No rompas el motor de escaneo ni la conexión a Supabase que ya funcionan. Solo mové la UI y creá las vistas nuevas. Avisame cuando el build esté listo.",
+      "status": "pending",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-11-02T06:05:26.127Z",
+      "sender": "ios",
+      "is_cancelled": false
     }
   ]
 }
