@@ -256,6 +256,18 @@
       "created_at": "2026-11-02T04:51:03.419Z",
       "sender": "ios",
       "is_cancelled": false
+    },
+    {
+      "id": "921615c6-2140-478e-abb6-127ceb5fc1c9",
+      "role": "user",
+      "content": "1. Configure MCP\nSet up your MCP client.\nDetails:\nAdd this configuration to ~/.gemini/antigravity/mcp_config.json:\nAfter saving the config, restart Antigravity. It will prompt you to complete the OAuth flow to authenticate with Supabase.\nTo edit the config from within Antigravity, click the ··· menu at the top of the Agent pane > MCP Servers > Manage MCP Servers > View raw config. From the Manage MCP Servers page you can also Refresh server configs and enable/disable servers.\nIf you run into authentication issues, open Agent Settings with Cmd+, (Mac) or Ctrl+, (Windows/Linux), navigate to the Customizations tab, and click the Authenticate button next to the Supabase server.\nNeed help?View Antigravity docs\nCode:\nFile: Code\n```\n1{\n2  \"mcpServers\": {\n3    \"supabase\": {\n4      \"serverUrl\": \"https://mcp.supabase.com/mcp?project_ref=uhnobkbhmviqtatjqzye&features=docs%2Caccount%2Cdatabase%2Cdebugging%2Cdevelopment%2Cfunctions%2Cbranching%2Cfeedback\"\n5    }\n6  }\n7}\n```\n\n2. Install Agent Skills (optional)\nAgent Skills give AI coding tools ready-made instructions, scripts, and resources for working with Supabase more accurately and efficiently.\nCode:\nFile: Code\n```\nnpx skills add supabase/agent-skills\n```",
+      "status": "pending",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-11-02T05:25:51.879Z",
+      "sender": "ios",
+      "is_cancelled": false
     }
   ]
 }
