@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, Users, Radar } from 'lucide-react';
+import { LayoutDashboard, Users, Radar, Compass } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const mobileItems = [
@@ -20,6 +20,11 @@ const mobileItems = [
     name: 'Escanear',
     href: '/scout',
     icon: Radar,
+  },
+  {
+    name: 'Discover',
+    href: '/discover',
+    icon: Compass,
   },
 ];
 

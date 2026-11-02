@@ -292,6 +292,18 @@
       "created_at": "2026-11-02T06:05:26.127Z",
       "sender": "ios",
       "is_cancelled": false
+    },
+    {
+      "id": "cb83fb99-057b-4931-aabe-33aa30fdbb64",
+      "role": "user",
+      "content": "PROMPT PARA ANTIGRAVITY (Fase 4 - Buscador Automático de Prospectos):Contexto: Vamos a agregar una funcionalidad de \"Auto-Discovery\". El usuario no solo va a escanear URLs manuales, sino que va a buscar negocios por zona y rubro, y la app los escaneará automáticamente.\n \nMisión: Crear la vista y la API para buscar prospectos usando Google Places API.\n \nPaso 1: Dependencias\nEjecutá npm install @googlemaps/google-maps-services-js.\n \nPaso 2: Variables de Entorno\nAvisame para configurar GOOGLE_MAPS_API_KEY en el .env.local y en Vercel.\n \nPaso 3: API Route (app/api/discover/route.ts)\n• Recibe { query, location } (ej. query: \"hoteles boutique\", location: \"Palermo, Buenos Aires\").\n• Usa el SDK de Google Maps (Client.textSearch) para buscar negocios.\n• Filtra los resultados: solo los que tengan el campo website (los que no tienen web no nos sirven para venderles una web).\n• Devuelve un JSON con [{ name, website, address, rating }]. \nPaso 4: Vista /discover (Nueva Ruta)\n• Agregá \"Discover\" al Sidebar.\n• La UI debe tener un formulario: Input para el Rubro (ej. \"Restaurantes\"), Input para la Zona (ej. \"Madrid\"), y un botón \"Buscar Prospectos\".\n• Al buscar, muestra una tabla con los resultados (Nombre, Dirección, Web, Rating).\n• El botón clave: Un checkbox en cada fila y un botón grande que diga \"Escanear Seleccionados\". \nPaso 5: El Escaneo Masivo\n• Cuando el usuario toca \"Escanear Seleccionados\", la app debe iterar sobre los seleccionados y llamar a nuestra API existente (/api/scan) para cada uno.\n• Mostrar una barra de progreso (ej. \"Escaneando 3 de 10...\").\n• Al terminar, redirigir al usuario al CRM (/prospects) para que vea los resultados con sus Pain Scores.",
+      "status": "pending",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-11-02T06:43:06.516Z",
+      "sender": "ios",
+      "is_cancelled": false
     }
   ]
 }

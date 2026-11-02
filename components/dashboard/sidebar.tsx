@@ -6,6 +6,7 @@ import {
   LayoutDashboard, 
   Users, 
   Radar, 
+  Compass,
   Sparkles, 
   ShieldCheck, 
   ExternalLink,
@@ -34,6 +35,13 @@ const navItems = [
     icon: Radar,
     description: 'Auditoría comercial',
     badge: 'Scout',
+  },
+  {
+    name: 'Discover',
+    href: '/discover',
+    icon: Compass,
+    description: 'Buscador automático',
+    badge: 'Auto',
   },
 ];
 

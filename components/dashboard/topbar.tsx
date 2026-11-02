@@ -29,6 +29,11 @@ const sectionMap: Record<string, SectionMeta> = {
     category: 'Herramientas',
     description: 'Auditoría técnica en vivo y cálculo de Pain Score',
   },
+  '/discover': {
+    title: 'Auto-Discovery',
+    category: 'Prospectos',
+    description: 'Búsqueda automática de negocios y auditoría masiva',
+  },
 };
 
 export function Topbar() {
